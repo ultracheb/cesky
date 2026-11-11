@@ -1,4 +1,4 @@
-const CACHE='cesky-offline-fefbba6585fccb57';
+const CACHE='cesky-offline-ca0724c40a86ecb4';
 const BASE=self.registration.scope;
 const FILES=['index.html','manifest.webmanifest','icon.svg','icon.png'].map(p=>new URL(p,BASE).href);
 self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(FILES);await self.skipWaiting();})()));
